@@ -1,0 +1,164 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1. 引入 Bootstrap 5 -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+
+    </style>
+
+<body>
+    <div class="container">
+        <h2>導覽與頁籤</h2>
+        <p>.nav 本身彈性盒</p>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="container">
+        <h2>垂直對齊</h2>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="container">
+        <h2>分頁標籤</h2>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="container">
+        <h2>膠囊狀</h2>
+        <p>.active 作用在該選項是上，.disable 禁用</p>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <!-- flex-basis -->
+    <div class="container">
+        <h1>填充和對齊</h1>
+        <p>.nav 有兩種寬度擴展用的 class， .nav-fill 和 .nav-justified</p>
+        <h2>.nav-fill</h2>
+        <p>每個 .nav-item 不是等寬</p>
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+                <a class="nav-link active bg-primary" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link bg-danger" href="#">Much longer nav link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link bg-waring" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link bg-success">Disabled</a>
+            </li>
+        </ul>
+        <h2>.nav justified</h2>
+        <p>每個 .nav-item 都是等寬</p>
+        <ul class="nav nav-pills nav-justified">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Much longer nav link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Javascript 行為</h2>
+        <h3>使用 data 屬性設定</h3>
+        <ul>
+            <li>分頁選單區按鈕加上 data-bs-toggle="tab" 啟動 tab 功能</li>
+            <li>如果要呈現膠囊狀加上 data-bs-toggle = "pill"，啟動 pill 功能</li>
+            <li>data-bs-target 的值要對應內容呈現區的 id ，例如 #home 對應 id="home"</li>
+            <li>data-bs-target 的值要對應內容呈現區的 id ，例如：#home 對應 id="home"</li>
+        </ul>
+        <!-- 分頁選單區 -->
+        <!-- 主要是 data-bs-toggle="tab" data-bs-target="#home" 要留下 -->
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#home">Home</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile">Profile</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#contact">Contact</button>
+            </li>
+        </ul>
+        <!-- 內容展現區 -->
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home">
+                焦點小焦點小遊戲，屬性確保隨意選項喜愛歡迎解釋小學焦點小遊戲，屬性確保隨意選項喜愛歡迎解釋小學焦點小遊戲，屬性確保隨意選項喜愛歡迎解釋小學焦點小遊戲，屬性確保隨意選項喜愛歡迎解釋小學焦點小遊戲，屬性確保隨意選項喜愛歡迎解釋小學遊戲，屬性確保隨意選項喜愛歡迎解釋小學男性因此銷售，宣傳文章生命承擔，是從已經，接到你的，私。
+            </div>
+            <div class="tab-pane fade" id="profile">
+                通過所謂令人人們予以都有一人焦點小遊戲，屬性確保隨意選項喜愛歡迎解釋小學焦點小遊戲，屬性確保隨意選項喜愛歡迎解釋小學焦點小遊戲，屬性確保隨意選項喜愛歡迎解釋小學焦點小遊戲，屬性確保隨意選項喜愛歡迎解釋小學焦點小遊戲，屬性確保隨意選項喜愛歡迎解釋小學兩年所說只能一樣以為法律責任玄幻，基礎上，級別交給發佈，初步地方歐洲植。
+            </div>
+            <div class="tab-pane fade" id="contact">
+                更好恐怕萬元歌詞焦點小遊戲，屬性確保隨意選項喜愛歡迎解釋小學焦點小遊戲，屬性確保隨意選項喜愛歡迎解釋小學焦點小遊戲，屬性確保隨意選項喜愛歡迎解釋小學焦點小遊戲，屬性確保隨意選項喜愛歡迎解釋小學焦點小遊戲，屬性確保隨意選項喜愛歡迎解釋小學專用作者點擊，先生你還往往世紀大聲比賽五年一流你們記憶仍然本論壇，大賽環保，參觀批。
+            </div>
+        </div>
+    </div>
+    <!-- 2. 引入bootstrap.bundle.js 才可以使用元件(如果為了互動視窗) -->
+    <script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
